@@ -1,0 +1,9 @@
+ syscalls, direct syscalls and indirect syscalls
+
+In recent years, more and more **EDR vendors** have implemented the technique of **user-mode hooking**, which, simply put, allows an EDR to redirect code executed in the context of APIs to its own hooking.dll for analysis at runtime. If the code executed does not appear to be malicious to the EDR, the correlated system call will be executed, otherwise the EDR will prevent execution. User-mode hooking makes malware execution more difficult, so attackers (red teams) use various techniques such as API unhooking, direct system calls or indirect system calls to bypass EDRs.
+
+user mode kernel mode
+
+ring levels
+
+virutual memory
