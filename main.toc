@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}EDRs Monitorización}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}EDRs Bypass}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Taxonomía de Malware}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Taxonomía de Shellcodes}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Listado de EDRs}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Genealogía de Procesos en Windows}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Memoria Virtual en Windows}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Win32 API}{9}{section.2.6}%

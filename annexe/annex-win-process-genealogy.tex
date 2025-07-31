@@ -1,10 +1,20 @@
-\chapter{Genealogía de Procesos en Windows}
+\section{Genealogía de Procesos en Windows}
 
 La genealogía de procesos en Windows representa la jerarquía de creación de
 procesos desde el arranque del sistema hasta el inicio de sesión del usuario.
 Comprender esta estructura es esencial para el análisis forense, la respuesta a
 incidentes y la detección de malware, ya que permite identificar comportamientos
 anómalos en los procesos del sistema.
+
+\vspace{1em}
+\noindent A continuación se muestra la genealogía de procesos típica en
+Windows:
+
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/fig-annex-win-process-genealogy.png}
+\end{center}
+
+\noindent Fuente: \texttt{youtube.com/13cubed}
 
 \section*{Nivel 0: Proceso raíz}
 
@@ -79,14 +89,3 @@ Comprender esta estructura es fundamental para:
     \item Realizar análisis forense de procesos mediante herramientas como
     Sysmon, EDR, Process Explorer, o Zeek.
 \end{itemize}
-
-\vspace{1em}
-\noindent A continuación se muestra la genealogía de procesos típica en
-Windows:
-
-\begin{center}
-    \includegraphics[width=0.95\textwidth]{image.png}
-\end{center}
-
-\noindent Fuente: \texttt{youtube.com/13cubed}
-

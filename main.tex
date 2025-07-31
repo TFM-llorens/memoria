@@ -1,12 +1,12 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
-\usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
-\title{Primera Aproximación al Trabajo de Fin de Máster}
+\title{Trabajo de Fin de Máster}
 \author{Tu Nombre}
 \date{\today}
 
@@ -14,48 +14,24 @@
 
 \maketitle
 
-\section*{Título tentativo}
-\textbf{Análisis estático y dinámico de código fuente descargado de internet: detección de software malicioso en repositorios abiertos}
+\tableofcontents
 
-\section*{Descripción general}
-Este trabajo de fin de máster tiene como objetivo estudiar técnicas de análisis de malware aplicadas a código fuente obtenido de internet. Se plantea evaluar la presencia de comportamientos maliciosos en repositorios abiertos mediante herramientas y metodologías tanto estáticas como dinámicas, buscando identificar patrones comunes en posibles amenazas encubiertas en proyectos aparentemente legítimos.
+\input{introduction.tex}
 
-\section*{Estructura preliminar y puntos clave}
+% Chapters
+\input{chapters/chap1-edr-monitoring.tex}
+\input{chapters/chap2-edr-bypass.tex}
 
-\subsection*{1. Introducción}
-\begin{itemize}[label=--]
-    \item Contexto del malware en repositorios públicos.
-    \item Motivación del estudio.
-    \item Objetivos generales y específicos.
-\end{itemize}
+\chapter*{Anexos}
+\input{annexe/annex1-malware-taxonomy.tex}
+\input{annexe/annex2-shellcodes-taxonomy.tex}
+\input{annexe/annex3-edr-listing.tex}
+\input{annexe/annex-win-process-genealogy.tex}
+\input{annexe/annex-win-virutual-memory.tex}
+\input{annexe/annex-win32api.tex}
 
-\subsection*{2. Estado del arte}
-\begin{itemize}[label=--]
-    \item Análisis de malware: enfoques estáticos y dinámicos.
-    \item Casos documentados de malware en GitHub y otros repositorios.
-    \item Herramientas existentes para escaneo de código malicioso.
-\end{itemize}
-
-\subsection*{3. Metodología}
-\begin{itemize}[label=--]
-    \item Criterios para selección de proyectos/repositories.
-    \item Entorno controlado para análisis dinámico (sandboxing).
-    \item Técnicas de análisis estático (linting, detección de obfuscación, etc.).
-    \item Pipeline de análisis automatizado.
-\end{itemize}
-
-\subsection*{4. Resultados esperados}
-\begin{itemize}[label=--]
-    \item Identificación de patrones o firmas maliciosas comunes.
-    \item Clasificación de riesgos según tipo de proyecto o lenguaje.
-    \item Limitaciones del enfoque propuesto.
-\end{itemize}
-
-\subsection*{5. Conclusiones provisionales}
-\begin{itemize}[label=--]
-    \item Potencial impacto del estudio en la comunidad open-source.
-    \item Viabilidad de integrar este análisis en flujos DevSecOps.
-    \item Proyecciones para trabajos futuros o ampliaciones del estudio.
-\end{itemize}
+% Resultados y bibliografía
+\input{results.tex}
+\input{references.bib}
 
 \end{document}
