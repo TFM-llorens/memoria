@@ -1,0 +1,46 @@
+\chapter{EDRs Bypass}
+
+\section{unhooking}
+
+Todos los procesos de windows el primer dll que cargan es: ntdll.dll 
+
+Este dll es un handler para realizar syscalls sobre hilos procesos y memoria etc
+
+Ej: NtCreateThreadEx, NtAllocateVirtualMemory, etc
+
+El edr inyecta en esas funcion un jmp para que antes de saltar a syscalls salte 
+al edr
+
+La primera tecnica consiste en cargar una version limpia de la funcion en la que
+aun no se ha establecido el hook, y sobreescribir la funcion
+
+hay dos formas de obtener la funcion limpia, cagando una version de ntdll.dll
+desde fichero (problema los edr vigilan esto)
+
+Otra opcion crear un proceso en suspension, estos solo tiene el codigo de la
+aplicacion y el ntdll.dll
+
+\section{clonando procesos (Dirty Vanity)}
+
+Para realizar process hollowing, se tiene que llamar a 5 syscalls (muy ruidoso)
+Pero si se llaman a 3 desde un proceso y dos desde su hijo, los edrs no
+detectaban esa actividad
+
+\section{direct system}
+
+Otra opcion para pasar bypassear los hooks del edr es no utilizar ntdll.dll y 
+llamar directamente a la syscall
+
+el problema es que hace falta el SSN y es un valor arbitrario que cambia muy 
+frecuentemente entre builds de windows
+
+la primera solucion de esto fue "hells gate" que cargaba ntdll.dll desde disco
+y de ahi recuperaba el SSN (muy ruidoso para los edr)
+
+Versiones mas modernas: SysWhispers2
+
+\section{indirect system}
+
+Aun no se como funciona
+
+
