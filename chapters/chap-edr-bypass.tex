@@ -26,7 +26,10 @@ Para realizar process hollowing, se tiene que llamar a 5 syscalls (muy ruidoso)
 Pero si se llaman a 3 desde un proceso y dos desde su hijo, los edrs no
 detectaban esa actividad
 
-\section{direct system}
+\section{syscalls}
+
+
+\subsection{direct system}
 
 Otra opcion para pasar bypassear los hooks del edr es no utilizar ntdll.dll y 
 llamar directamente a la syscall
@@ -39,8 +42,10 @@ y de ahi recuperaba el SSN (muy ruidoso para los edr)
 
 Versiones mas modernas: SysWhispers2
 
-\section{indirect system}
+\subsection{indirect system}
 
 Aun no se como funciona
+
+\section{call stack spoofing}
 
 
