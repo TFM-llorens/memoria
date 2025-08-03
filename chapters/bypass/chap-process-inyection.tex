@@ -1,0 +1,7 @@
+\chapter{Process Injection}
+
+\section{clonando procesos (Dirty Vanity)}
+
+Para realizar process hollowing, se tiene que llamar a 5 syscalls (muy ruidoso)
+Pero si se llaman a 3 desde un proceso y dos desde su hijo, los edrs no
+detectaban esa actividad

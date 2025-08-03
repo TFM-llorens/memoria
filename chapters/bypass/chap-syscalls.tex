@@ -1,0 +1,18 @@
+\chapter{syscalls}
+
+\section{direct system}
+
+Otra opcion para pasar bypassear los hooks del edr es no utilizar ntdll.dll y 
+llamar directamente a la syscall
+
+el problema es que hace falta el SSN y es un valor arbitrario que cambia muy 
+frecuentemente entre builds de windows
+
+la primera solucion de esto fue "hells gate" que cargaba ntdll.dll desde disco
+y de ahi recuperaba el SSN (muy ruidoso para los edr)
+
+Versiones mas modernas: SysWhispers2
+
+\section{indirect system}
+
+Aun no se como funciona
