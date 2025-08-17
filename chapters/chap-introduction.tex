@@ -1,16 +1,57 @@
 \chapter{Introducción}
 
-\textit{Contenido: Esta sección dará un vistazo general a un ataque típico 
+\textit{Contenido: Esta sección dará un vistazo general al ataque que se va llevar a cabo, 
 apoyándose en el Cyber Kill Chain de Lockheed Martin y el modelo MITRE ATTACK.}
 \vspace{1em}
 
 \section{Reconocimiento}
 
-Recopilando información sobre la víctima
+\subsection{Objetivo}
+
+Identificar cualquier elemento dentro de la organización víctima que pueda 
+conducir a una ejecución remota de código (RCE).
+
+\begin{itemize}
+    \item Vulnerabilidades en servicios expuestos
+    \begin{itemize}
+        \item Buffer overflow
+        \item ROP
+    \end{itemize}
+    \item Credenciales expuestas
+    \begin{itemize}
+        \item VPN
+        \item RDP
+    \end{itemize}
+\end{itemize}
+
+\subsection{Metodología}
+
+\begin{enumerate}
+    \item Enumeración de servicios expuestos asociados a la víctima.
+    \item Búsqueda de vulnerabilidades conocidas (CVEs) asociadas a dichos servicios.
+    \item Identificación del mayor número posible de usuarios relacionados con la víctima.
+    \item Rastreo de posibles credenciales expuestas en fuentes abiertas.
+\end{enumerate}
+
+\subsection{Hallazgos}
+
+En nuestro caso, se ha identificado un servidor web expuesto 
+\textbf{vulnerable a técnicas de explotación basadas en ROP chain}, 
+lo que podría permitir la ejecución de código arbitrario.
+
+
 
 \section{Weaponization}
 
-Se desarrolla un payload malicioso
+\subsection{Objetivo}
+
+Crear el payload que se utilizará para explotar la vulnerabilidad identificada 
+en el paso anterior.
+
+\subsection{Metodología}
+
+Normalmente se utilizar herramientas en este caso los payloads se crearan a mana 
+por fines didacticos.
 
 \section{Entrega}
 
