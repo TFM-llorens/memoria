@@ -4,7 +4,7 @@ En Windows, un proceso puede depender de múltiples librerías dinámicas
 el espacio de direcciones del proceso y su interacción se realiza a través de 
 estructuras específicas que Windows mantiene en memoria.
 
-\section{Carga de DLLs en un proceso}
+\subsection{Carga de DLLs en un proceso}
 Cuando un proceso arranca, indica qué DLLs necesita y qué funciones de cada DLL 
 va a utilizar. Windows realiza los siguientes pasos:
 
@@ -23,7 +23,7 @@ Cada DLL se carga como un módulo completo, incluyendo sus secciones
 \texttt{.text}, \texttt{.rdata}, \texttt{.data}, etc., mapeadas en memoria 
 contigua a partir de la \emph{base address} del módulo.
 
-\section{PEB y la lista de módulos}
+\subsection{PEB y la lista de módulos}
 El \textbf{Process Environment Block (PEB)} es una estructura interna de Windows 
 que contiene información sobre el proceso, incluyendo los módulos (DLLs) 
 cargados. 
@@ -45,7 +45,7 @@ entrada de esta lista contiene:
 Recorrer esta lista permite obtener todas las DLLs cargadas y sus direcciones en 
 memoria.
 
-\section{Import Address Table (IAT)}
+\subsection{Import Address Table (IAT)}
 Para que un proceso llame a funciones de una DLL, Windows utiliza la 
 \textbf{Import Address Table (IAT)}. La IAT contiene punteros a las funciones 
 importadas por el proceso. Durante la carga:
@@ -60,7 +60,7 @@ Cuando el proceso ejecuta una llamada a una función importada, en realidad est�
 saltando a la dirección contenida en la IAT, que apunta a la DLL cargada en 
 memoria.
 
-\section{Resumen}
+\subsection{Resumen}
 En conjunto, el PEB y la IAT permiten a un proceso interactuar de manera 
 eficiente con sus DLLs:
 
