@@ -1,5 +1,9 @@
 \chapter{Como funcionan los EDRs}
 
+\textit{Contenido: En esta sección se predende hacer una enumeracion de las 
+distintas tecnicas que utilizan los EDR para realizar detecciones}
+\vspace{1em}
+
 \section{Kernell callbacks}
 
 El edr mantendra un driver en kernel land
@@ -18,7 +22,7 @@ AMSI es una API genérica de escaneo antimalware que permite que las aplicacione
 potencialmente malicioso a un proveedor antivirus registrado para su análisis 
 antes de ser ejecutado.
 
-\section{System call monitoring}
+\section{Syscalls hooks}
 
 El edr pone hooks en las llamadas de win32api a syscalls
 pone un jmp y donde deberia saltar a la syscall salta al edr de modo que lo 
