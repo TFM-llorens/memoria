@@ -21,12 +21,8 @@ AMSI es una API genérica de escaneo antimalware que permite que las aplicacione
 potencialmente malicioso a un proveedor antivirus registrado para su análisis 
 antes de ser ejecutado.
 
-\section{Syscalls hooks}
+\section{User mode hooks}
 
 El edr pone hooks en las llamadas de win32api a syscalls
 pone un jmp y donde deberia saltar a la syscall salta al edr de modo que lo 
 analiza antes de que se ejecute
-
-\section{Monitorizacion de Memoria}
-
-yara
