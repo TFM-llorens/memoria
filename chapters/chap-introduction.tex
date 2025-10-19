@@ -1,47 +1,27 @@
 \chapter{Introducción}
 
-\textit{Contenido: Esta sección dará un vistazo general a un ataque típico 
-apoyándose en el Cyber Kill Chain de Lockheed Martin y el modelo MITRE ATTACK.}
-\vspace{1em}
+\section{Estructura del trabajo}
+El presente trabajo se organiza en capítulos, donde cada capítulo analiza en 
+profundidad un ciberataque concreto. Para ofrecer una visión completa y 
+equilibrada del fenómeno, en cada capítulo se desarrollan de forma paralela 
+las dos perspectivas fundamentales:
 
-\section{Reconocimiento}
+\begin{itemize}
+    \item \textbf{Perspectiva del atacante (Red Team):} se describe el ciclo de 
+    vida completo del cibercriminal aplicado al caso estudiado, junto con las 
+    técnicas y herramientas empleadas, los obstáculos encontrados y los 
+    beneficios o impactos obtenidos por el atacante.
+    \item \textbf{Perspectiva del defensor (Blue Team / analistas):} se expone 
+    la respuesta de los equipos de seguridad y analistas forenses: 
+    identificación y recolección de evidencias, metodologías de investigación, 
+    dificultades técnicas encontradas durante la triage y contención, y medidas 
+    de mitigación y remediación aplicadas.
+\end{itemize}
 
-Recopilando información sobre la víctima
-
-\section{Weaponization}
-
-Se desarrolla un payload malicioso
-
-\section{Entrega}
-
-Como se entrega el payload a la víctima
-
-Vectores típicos: phishing, vulnerabilidades sin parchear, credenciales expuestas.
-
-El objetivo aquí es hacer llegar el malware o el loader al sistema de la víctima.
-
-\section{Explotación}
-
-Como conseguir ejecucion del payload en la víctima
-
-Una vez entregado, se consigue ejecutar código en el sistema.
-
-Puede ser directo (el ransomware se ejecuta) o mediante un loader que se encarga 
-de preparar el entorno y luego lanzar el malware.
-
-\section{Instalación}
-
-El malware se instala en el sistema de la víctima.
-El loader instala el ransomware, a menudo asegurando persistencia, o simplemente 
-prepara el entorno para que el malware se ejecute correctamente.
-
-\section{Command and Control (C2)}
-
-El malware establece comunicación con el atacante para recibir instrucciones.
-
-\section{Acciones sobre el objetivo}
-
-El atacante realiza su objetivo final
-- exfiltracion
-- encriptacion
-- criptominero
+Cada capítulo finalizará con una sección de \emph{lecciones aprendidas} y 
+recomendaciones prácticas que integren ambas perspectivas, resaltando 
+indicadores de compromiso (IoC), puntos de mejora en la postura defensiva y 
+propuestas de detección y prevención basadas en las tácticas, técnicas y 
+procedimientos (TTPs) observados. Esta organización pretende facilitar el 
+análisis comparativo entre ofensiva y defensiva y aportar conclusiones útiles 
+tanto para equipos de red team como para equipos de respuesta y defensa.
